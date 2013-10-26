@@ -1,0 +1,414 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"input",
+				"inputFile	statement"
+			],
+			[
+				"inpu",
+				"inputList	statement"
+			],
+			[
+				"ra",
+				"range	class"
+			],
+			[
+				"p",
+				"pprint	function"
+			],
+			[
+				"array",
+				"array4"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 291,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "givenInput.txt",
+			"settings":
+			{
+				"buffer_size": 180,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/User/PPython.sublime-build",
+	"command_palette":
+	{
+		"height": 340.0,
+		"selected_items":
+		[
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"pyth",
+				"SublimeREPL: Python"
+			],
+			[
+				"python",
+				"SublimeREPL: Python"
+			],
+			[
+				"repl",
+				"SublimeREPL: Python"
+			],
+			[
+				"remve",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"key",
+				"Keymaps: Find a keymap for..."
+			],
+			[
+				"align",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"alignt",
+				"Preferences: Alignment Key Bindings – User"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"cheat",
+				"Keymaps: Cheat Sheet"
+			],
+			[
+				"keyam",
+				"Keymaps: Find a keymap for..."
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"goo",
+				"Google Spell Check"
+			],
+			[
+				"spel",
+				"Google Spell Check"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pla",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown Extended"
+			]
+		],
+		"width": 446.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Nick/Dropbox/School/Fall 2013/CS 424/Homework/Programming Assignment 1/ProgramPlanning.txt",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/User/User.sublime-mousemap",
+		"/C/Users/Nick/Dropbox/School/Fall 2013/CS 317/Homework/Homework 3/InsertSortTest.py",
+		"/C/Users/Nick/Dropbox/School/Fall 2013/CS 317/Homework/Homework 3/weights.py",
+		"/C/Users/Nick/Dropbox/School/Fall 2013/CS 317/Homework/Homework 3/Homework 3.txt",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/User/PPython.sublime-build",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/Anaconda/Anaconda.sublime-settings",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/User/Anaconda.sublime-settings",
+		"/C/Users/Nick/Dropbox/School/Fall 2013/CS 317/Homework/Homework 3/Homework 3.md",
+		"/Z/School/Fall 2013/CS 317/Homework/Homework 3/Homework 3.txt",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/SmartMarkdown/Default.sublime-keymap",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/Z/School/Fall 2013/CS 317/Homework/Homework 3/InsertSortTest.py",
+		"/Z/School/Fall 2013/CS 317/Homework/Homework 3/test.py",
+		"/Z/School/Fall 2013/CS 317/Homework/Homework 3/Homework 3.md",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/User/BufferScroll.sublime-settings",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/SideBarEnhancements/CHANGELOG",
+		"/Z/Applications/Sublime/Data/Packages/User/User.sublime-mousemap",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/Alignment/Default (Windows).sublime-keymap",
+		"/C/Users/Nick/Dropbox/School/Fall 2013/CS 424/Homework/Programming Assignment 1/ProgramPlanning.md",
+		"/C/Users/Nick/AppData/Local/Temp/7zO513F.tmp/README",
+		"/C/Users/Nick/Desktop/start8Discount.txt",
+		"/C/Users/Nick/Dropbox/School/Fall 2013/CS 424/Homework/Programming Assignment 1/Requirements.md",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Installed Packages/Keymaps.sublime-package",
+		"/C/Users/Nick/Dropbox/School/Fall 2013/CS 105/Discussion Topics/PrivacyDiscussion.md",
+		"/C/Users/Nick/Dropbox/School/Fall 2013/EH 301/Project Documents/PlainTextCopy/BP4NinthGraders.txt",
+		"/C/Users/Nick/Dropbox/School/Fall 2013/EH 301/Project Documents/Code Examples/Tests/OOP/classTest.lua",
+		"/C/Users/Nick/Dropbox/School/Fall 2013/EH 301/Project Documents/Code Examples/Tests/OOP/character.lua",
+		"/C/Users/Nick/Dropbox/School/Fall 2013/EH 301/Project Documents/Code Examples/Lesson 1/Project/character.lua",
+		"/C/Users/Nick/Dropbox/Applications/Sublime/Data/Packages/BufferScroll/BufferScroll.sublime-settings"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 118.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"k",
+			"Z:",
+			"shift+t",
+			"list10",
+			"unsortedList",
+			"inputArray",
+			"ctrl+b",
+			",\n",
+			"i",
+			"x",
+			"Switch",
+			"-",
+			"*"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"C:\\\\Users\\\\Nick\\\\Dropbox"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								227,
+								227
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "python",
+							"buffer_scroll_name": "96d6cf55",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "givenInput.txt",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 180,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "plain text",
+							"buffer_scroll_name": "70f98734",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 140.0
+	},
+	"project": "LexicalAnalyzer.sublime-project",
+	"replace":
+	{
+		"height": 74.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\Nick\\Dropbox\\School\\Fall 2013\\EH 301\\Project Documents\\BPNG.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 115.0,
+		"selected_items":
+		[
+		],
+		"width": 360.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

@@ -1,0 +1,14 @@
+int main()
+{ ????????
+    int
+        x12abc, z;
+        float 2xy;
+        // abc ///
+        x12abc + xy
+        abc = 3 *
+        3.1412;
+39.
+ 50
+ x12abc = 3;
+ fori = 1;
+ ~ well
