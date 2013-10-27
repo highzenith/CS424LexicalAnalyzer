@@ -1,4 +1,4 @@
-filename = "givenInput.txt"
+filename = "testInput.txt"
 inputFile = open(filename, 'rt')
 # STT = [eol, letter, digit, period, (~, ?, :, _, \)]
 STT = [
@@ -11,37 +11,32 @@ STT = [
 
 
 def NextToken():
-    index = 1
     state = 0
     while state not in {'F1', 'F2', 'F3'} or state == 0:
-        ch = inputFile.read(1)
-        if ch == '':
-            break
-        if ch in {' ', '(', ')', ';', '{', '}', ',', '/', '+', '=', '*'}:
-            continue
-        state = 0
-        print(ch)
-        chInt = CharToType(ch)
-        newState = STT[state][chInt]
-        print("State is: " + str(newState))
-        if newState not in {
-            'F1', 'F2', 'F3', 'noTokenErr', 'charErr', 'floatErr'
-        }:
-            state = newState
-            #print("State is: " + str(state))
-        elif newState in {'F1', 'F2', 'F3'}:
-            tokenType = newState
-            #print("Final State is: " + str(newState))
-            while ch != '\n':
-                ch = inputFile.read(1)
-            break
+        inputLine = inputFile.readline()
+        for i, ch in enumerate(inputLine):
+            if ch == '':
+                print("End of File Reached")
+                break
+            if ch in {' ', '(', ')', ';', '{', '}', ',', '/', '+', '=', '*'}:
+                continue
+            chInt = CharToIntCode(ch)
+            newState = STT[state][chInt]
+            print("State is: " + str(newState) + " chInt is: " + str(chInt))
+            if newState not in {
+                'F1', 'F2', 'F3', 'noTokenErr', 'charErr', 'floatErr'
+            }:
+                state = newState
+            else:
+                state = newState
 
 
-def CharToType(char):
+def CharToIntCode(char):
     testString = char
     # Test for eol/newline char
     if testString == '\n':
         return 0
+        print("newline")
     elif testString.isalpha():
         return 1
     elif testString.isdigit():
@@ -54,6 +49,7 @@ def CharToType(char):
 
 def main():
     NextToken()
+    #print(str(STT[2][0]))
 
 
 if __name__ == '__main__':
