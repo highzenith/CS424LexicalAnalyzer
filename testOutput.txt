@@ -1,0 +1,23 @@
+OUTPUT
+-Line Number-    -Token Type-            -Token-
+1                keyword                 int
+2                ERROR                   ILLEGAL CHARACTER: '?'
+3                keyword                 int
+4                identifier              x12abc
+5                keyword                 float
+6                identifier              abc
+7                identifier              x12abc
+8                identifier              abc
+9                float                   3.1412
+10               ERROR                   ILLEGAL FLOAT
+11               integer                 50
+12               identifier              x12abc
+13               identifier              fori
+14               ERROR                   ILLEGAL CHARACTER: '~'
+
+
+SYMBOL TABLE
+-Symbol-         -Line Numbers-
+x12abc           [4, 7, 12]
+abc              [6, 8]
+fori             [13]

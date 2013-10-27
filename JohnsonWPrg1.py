@@ -1,10 +1,18 @@
-from pprint import pprint
 import collections
+#Variable containing the filename for input
 inFilename = "givenInput.txt"
+#Variable containing the filename for output
 outFilename = "testOutput.txt"
+#Variable for reading text from the input file
 inputFile = open(inFilename, 'rt')
-#outputFile = open(outFilename, 'w')
+#Variable for writing to the output file
+outputFile = open(outFilename, 'w')
+#String containing the header for output
 headingStr = "-Line Number-    -Token Type-            -Token-"
+#String containing the header for the symbol table in the output
+symbolTblStr = "-Symbol-" + 9 * " " + "-Line Numbers-"
+#Dictionary to be used as the symbol table in this lexer
+symbolTable = collections.OrderedDict()
 # State Trans. Table = [eol, letter, digit, period, (~, ?, :, _, \), Other]
 STT = [
     ['noTokenErr', 1, 2, 'floatErr', 'charErr', 0],
@@ -13,12 +21,21 @@ STT = [
     ['floatErr', 'floatErr', 4, 'floatErr', 'charErr', 'floatErr'],
     ['F3', 'F3', 4, 'F3', 'charErr', 'F3']
 ]
-symbolTable = collections.OrderedDict()
 
 
+#-----------------------------------------------------------
+# In the main function of this program, a line of the input
+# file is read and then passed into the NextToken() function.
+# After NextToken() returns a token, the details of the
+# token, along with the line number is printed. The token is
+# also added to the symbol table if it is an identifier type.
+# Finally, the symbol table is printed after the tokens.
+#-----------------------------------------------------------
 def main():
+    print("OUTPUT")
+    outputFile.write("OUTPUT" + "\n")
     print(headingStr)
-    #outputFile.write(headingStr + "\n")
+    outputFile.write(headingStr + "\n")
     lineNum = 1
     while True:
         line = inputFile.readline()
@@ -29,28 +46,36 @@ def main():
             if token[0] == "identifier":
                 symbolTable.setdefault(token[1], []).append(lineNum)
         print(str(lineNum), end="")
-        #outputFile.write(str(lineNum))
+        outputFile.write(str(lineNum))
         print(" " * (17 - len(str(lineNum))), end="")
-        #outputFile.write(" " * (17 - len(str(lineNum))))
+        outputFile.write(" " * (17 - len(str(lineNum))))
         print(str(token[0]), end='')
-        #outputFile.write(str(token[0]))
+        outputFile.write(str(token[0]))
         print(" " * (24 - len(str(token[0]))), end="")
-        #outputFile.write(" " * (24 - len(str(token[0]))))
+        outputFile.write(" " * (24 - len(str(token[0]))))
         print(str(token[1]))
-        #outputFile.write(str(token[1]) + "\n")
+        outputFile.write(str(token[1]) + "\n")
         lineNum += 1
-    print("\n" * 2 + "SYMBOL TABLE:")
-    print("-Symbol-" + 9 * " " + "-Line Numbers-" )
+    print("\n" * 2 + "SYMBOL TABLE")
+    outputFile.write("\n" * 2 + "SYMBOL TABLE" + "\n")
+    print(symbolTblStr)
+    outputFile.write(symbolTblStr + "\n")
     for i in range(0, len(symbolTable)):
         symbol = symbolTable.popitem(last=False)
         print(symbol[0], end="")
+        outputFile.write(symbol[0])
         print(" " * (17 - len(str(symbol[0]))), end="")
+        outputFile.write(" " * (17 - len(str(symbol[0]))))
         print(symbol[1])
-    # for key in symbolTable.keys():
-    #     print(key + " " + repr(symbolTable[key]))
+        outputFile.write(str(symbol[1]) + "\n")
 
 
-
+#-----------------------------------------------------------
+# This function repeatedly parses a character from a line of
+# input, checking the indices of the State Transition Table
+# to decide the next state. When a Final State or Error is
+# detected, a corresponding token is returned to main().
+#-----------------------------------------------------------
 def NextToken(inputLine):
     state = 0
     valStart = 0
@@ -102,7 +127,11 @@ def NextToken(inputLine):
             return newToken
 
 
-
+#-----------------------------------------------------------
+# This function converts the next character in the file to
+# its corresponding int code to be used as an index for the
+# State Transition Table.
+#-----------------------------------------------------------
 def CharToIntCode(char):
     testString = char
     # Test for eol/newline char
