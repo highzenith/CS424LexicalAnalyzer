@@ -1,6 +1,11 @@
-filename = "testInput.txt"
-inputFile = open(filename, 'rt')
-# State Trans. Table = [eol, letter, digit, period, (~, ?, :, _, \)]
+from pprint import pprint
+import collections
+inFilename = "givenInput.txt"
+outFilename = "testOutput.txt"
+inputFile = open(inFilename, 'rt')
+#outputFile = open(outFilename, 'w')
+headingStr = "-Line Number-    -Token Type-            -Token-"
+# State Trans. Table = [eol, letter, digit, period, (~, ?, :, _, \), Other]
 STT = [
     ['noTokenErr', 1, 2, 'floatErr', 'charErr', 0],
     ['F1', 1, 1, 'F1', 'charErr', 'F1'],
@@ -8,18 +13,42 @@ STT = [
     ['floatErr', 'floatErr', 4, 'floatErr', 'charErr', 'floatErr'],
     ['F3', 'F3', 4, 'F3', 'charErr', 'F3']
 ]
+symbolTable = collections.OrderedDict()
 
 
 def main():
-    #TODO: Add Header
+    print(headingStr)
+    #outputFile.write(headingStr + "\n")
     lineNum = 1
     while True:
         line = inputFile.readline()
         if len(line) == 0:
             break
         token = NextToken(line)
-        print("\nLine " + str(lineNum) + " Token: " + repr(token))
+        if token[0] is not None:
+            if token[0] == "identifier":
+                symbolTable.setdefault(token[1], []).append(lineNum)
+        print(str(lineNum), end="")
+        #outputFile.write(str(lineNum))
+        print(" " * (17 - len(str(lineNum))), end="")
+        #outputFile.write(" " * (17 - len(str(lineNum))))
+        print(str(token[0]), end='')
+        #outputFile.write(str(token[0]))
+        print(" " * (24 - len(str(token[0]))), end="")
+        #outputFile.write(" " * (24 - len(str(token[0]))))
+        print(str(token[1]))
+        #outputFile.write(str(token[1]) + "\n")
         lineNum += 1
+    print("\n" * 2 + "SYMBOL TABLE:")
+    print("-Symbol-" + 9 * " " + "-Line Numbers-" )
+    for i in range(0, len(symbolTable)):
+        symbol = symbolTable.popitem(last=False)
+        print(symbol[0], end="")
+        print(" " * (17 - len(str(symbol[0]))), end="")
+        print(symbol[1])
+    # for key in symbolTable.keys():
+    #     print(key + " " + repr(symbolTable[key]))
+
 
 
 def NextToken(inputLine):
